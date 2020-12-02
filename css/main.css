@@ -1,0 +1,811 @@
+#bg {
+opacity: 60%;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ z-index: -1;
+}
+
+font-family: 'Verdana', sans-serif;
+
+/*========= Defaults ============*/
+
+body {
+	font-family: 'PT Serif', serif;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+	width: 50%;
+    padding: 15px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+tr {
+	border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+tr:last-child{
+	border-bottom: none;
+}
+table, th, td {
+    border: none;
+}
+
+h1,h2,h3,h4,h5 {
+	margin: 0;
+	font-weight: 400;
+}
+
+h4 {
+	margin-top: 24px;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+}
+
+a:hover, a:focus, a{
+	color: #919191;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+	list-style-image: none;
+}
+
+ul.menu {
+	display: table;
+}
+
+ul.menu li {
+	float: left;
+	margin: 0 4px;
+}
+
+ul.menu li:first-child {
+	margin-left: 0;
+}
+
+ul.menu li:last-child {
+	margin-right: 0;
+}
+
+ul.menu li a {
+	display: block;
+	padding: 25px 13px 23px;
+	border-bottom: 3px solid transparent;
+}
+
+.container {
+	max-width: 1240px;
+	padding: 0 20px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* =========== Header ========= */
+
+header {
+	font-family: 'PT Sans', sans-serif;
+	background: #111;
+}
+
+.header-inner{
+	position: relative;
+}
+
+.header-inner:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 71px;
+	right: calc(100% - 20px);
+	background: #111;
+}
+
+.info-menu,
+.main-menu,
+.branding {
+	display: inline-block;
+	float: left;
+}
+
+.branding {
+	width: 200px;
+	background-color: #111;
+}
+.branding a {
+	width: 100%;
+	display: block;
+	padding: 15px 0;
+}
+.branding a img{
+	height: 37px;
+}
+
+.info-menu li a {
+	color: #b2b2b2;
+}
+
+.info-menu li a:hover {
+	border-bottom: 4px solid #b2b2b2;
+}
+
+.main-menu {
+	float: right;
+}
+
+.main-menu li a:hover {
+	border-bottom: 3px solid #1a54e7;
+}
+#welcome {
+	color: #b2b2b2;
+	border: none;
+	padding: 20px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+#logoutButton {
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 20px 32px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	font: 16px 'PT Sans', sans-serif;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+	right: 0;
+	z-index: 9;
+	overflow: scroll; height: 90vh;
+
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  overflow-y: scroll;
+}
+.form-container h1{
+	padding-bottom: 15px;
+}
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#messageButton{		
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+}
+
+/*=============  USER INDEX  ===============================*/
+.welcome-div {
+	position: relative;
+	height: 400px;
+}
+.welcome-div h1{
+  position: relative;
+
+  	background-color: #111;
+  font-size: 30pt;
+  color: white;
+  text-align: center;
+}
+.userDashboard {
+  border: 2px solid #555;
+  border-radius: 8px;
+  width: 440px;
+  
+}
+
+.collapsible {
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #555;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.dashboardContent {
+  display: none;
+  padding: 10px 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+  font-size: 14px;
+  font-family: Verdana,sans-serif;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-submit {
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 18px;
+  position: relative;
+  width: 80%; 
+		margin: 5px 20px 0 0;}
+
+  
+
+/*=============  Sidebar  ===============================*/
+.sidebar {
+  height: 200%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 71px;
+  left: 0;
+  background-color: #111;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  	padding-bottom: 50px;
+}
+.sidebar h1 {
+	font-family: Calibri;
+  text-decoration: none;
+  font-size: 20px;
+  color: #919191;
+  padding-left: 10px;
+}
+.sidebar a {
+	font-family: Calibri;
+  padding: 0px 8px 4px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #919191;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 40px;
+}
+.sidebar a:last-child{
+	margin-bottom: 0px;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+  padding: 10px 15px;
+  border: 2px solid #555;
+  border-radius: 8px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.main-content-div {
+	display: inline-table;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* The container */
+.checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+  left: 7px;
+  top: 2.5px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*============= MAP ===============================*/
+
+.map {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
+}
+.map-content {
+	height: 100%;
+	text-align: center;
+	padding-top: 50px;
+  	padding-bottom: 50px;
+	color: #fff;
+	position: relative;
+}
+#map-content-upload {
+	padding-top: 0px;
+}
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#mapid {
+	height: 100%;
+}
+
+
+.newsletter {
+	background-color:  #1a54e7;
+	height: 217px;
+}
+
+.newsletter .container {
+	padding-top: 30px;
+	text-align: center;
+	color: #fff;
+}
+.newsletter p{
+	color: #8bafff;
+}
+
+
+/*=============  Form  ===============================*/
+
+.form-inner{
+	position: relative;
+	width: 402px;
+	height: 50px;
+	margin: auto;
+	padding-top: 28px;
+}
+
+.newsletter input {
+	background-color:  #2c6cff;
+	width: 333px;
+	height: 50px;
+	border-radius: 30px;
+	border-width: 0px;
+	display: inline-block;
+	float: left;
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 18px;
+	outline: none;
+}
+
+.newsletter .signup {
+	background-color:  #ffffff;
+	width: 134px;
+	border-radius: 30px;
+	display: inline-block;
+	font-family: PTSans;
+	color:  #1a54e7;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 36px;
+	text-align: center;
+	float: right;
+	position: absolute;
+	right: 0;
+}
+
+.uploadForm {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+	margin: 20px auto;
+	width: 600px;
+	height: 100px;
+	position: relative;
+}
+
+#note{
+	width: 60%;
+	text-align: center;
+	height: auto;
+}
+
+#uploadSubmit {
+  font-size: 20px;
+  background-color: green;
+	position: absolute;
+	  right: 4px;
+	  top: 10px;
+		width: 150px;
+	opacity: 0.8;
+}
+
+#fileToUpload {
+	position: absolute;
+	  bottom: 20px;
+		left: 20px;
+}
+
+.div1 {
+	border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+	margin: 100px auto;
+	width: 600px;
+	height: 100px;
+	position: relative;
+}
+
+#back {
+	position: absolute;
+	  right: 4px;
+	  bottom: 4px;
+	opacity: 0.9;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nice-select1 {
+    /* -webkit-tap-highlight-color: transparent; */
+    background-color: transparent;
+    color: #919191; 
+    border-radius: 5px; 
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    height: 42px;
+    line-height: 40px;
+    outline: 0;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left!important;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+  }
+
+/*=============  Footer  ===============================*/
+
+.footer {
+	height: 200px;
+	z-index: 1;
+	background-color: #111;
+	color: darkgrey;
+	width: 100%;
+}
+
+.footer .container	{
+	padding-top: 30px;
+	text-align: center;
+}
+
+.footer p {
+	line-height: 36px;
+	font-family: ProximaNova;
+	color:white;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(0, 128, 38);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+	font: 14px 'PT Sans', sans-serif;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:before {
+  content: '\00AB';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+
+
+
+
+/*=====================  Responsive ====================*/
+
+			/*------------ Tablet -------------*/
+
+
+@media only screen and (max-width: 1080px) {
+
+.main-menu {
+	width: 100%;
+  text-align: center;
+}
+
+ul.menu {
+	margin: 0 auto;
+  line-height: 1.4;
+  padding-left: 0;
+}
+
+.main-menu li {
+	display: inline;
+  text-align: center;
+  margin: 50px;
+}
+
+.info-menu {
+	float: right;
+	color:red;
+}
+
+
+.footer {
+	height: auto;
+	padding-bottom: 100px;
+}
+
+.userDashboard {
+  border: 2px solid #555;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+}
+
+
+
+
+/*------------ mobile -------------*/
+
+
+@media only screen and (max-width: 580px) {
+
+
+.info-menu {
+	float: left;
+}
+
+/*===============CONTENT=================*/
+
+h4 {
+	font-size: 1em;
+}
+
+.form-inner{
+	width: 302px;
+}
+
+
+.newsletter input {
+	width: 270px;
+}
+
+.newsletter .signup {
+	width: auto;
+}
+
+@media only screen and (max-width: 1080px) {
+
+	ul.menu li {
+		margin: 0px;
+	}
+
+}
+}

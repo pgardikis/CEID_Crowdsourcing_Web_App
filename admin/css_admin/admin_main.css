@@ -1,0 +1,131 @@
+
+body {
+    margin: 0;
+    background-color: #ddd;
+}
+
+  ul {
+    background-image: url("../../images/admin.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: Coral;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    background-color: #aaa;
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
+  
+  
+  .onea {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .twoa { 
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two { 
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 3/3;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .five {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 3/3;
+    grid-row: 2;
+  }
+  
+
+  .left_bar {
+    margin-left: 7%;
+    margin-right: auto;
+  }
+
+  .button {
+    border-radius: 15px;
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 70%;
+    height:100px;
+  }
+  
+  .button:hover {
+    background-color: RoyalBlue;
+  }
+  
+  .btn {
+    /* background-color: DodgerBlue; */
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  #deleteButton {
+  display: none;
+  background-color: red;
+  width: 60%;
+}
+
+
+  
+
